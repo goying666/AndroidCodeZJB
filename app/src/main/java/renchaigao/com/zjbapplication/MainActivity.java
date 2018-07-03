@@ -99,8 +99,11 @@ public class MainActivity extends AppCompatActivity {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         final TeamFragment teamFragment = new TeamFragment();
         final DatingFragment datingFragment = new DatingFragment();
+        adapter.addFragment(new Fragment());
         adapter.addFragment(teamFragment);
         adapter.addFragment(datingFragment);
+        adapter.addFragment(new Fragment());
+        adapter.addFragment(new Fragment());
         viewPager.setAdapter(adapter);
     }
     static class ViewPagerAdapter extends FragmentPagerAdapter {
